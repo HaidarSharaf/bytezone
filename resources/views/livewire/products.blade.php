@@ -99,25 +99,4 @@
         @endforeach
     </div>
 
-    <div class="flex justify-center items-center mt-5">
-
-        @if($hasMore)
-            <button
-                wire:click="loadMore()"
-                wire:loading.remove
-                class="flex cursor-pointer rounded-lg px-2 py-4 text-base font-semibold justify-center items-center bg-[#FF4D30] text-white hover:bg-[#F53003]]"
-            >
-                Load More
-            </button>
-        @endif
-
-        <div
-            wire:loading
-            class="w-full h-12"
-        >
-            <livewire:loader />
-        </div>
-
-    </div>
-
 </section>

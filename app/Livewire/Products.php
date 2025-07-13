@@ -13,35 +13,6 @@ class Products extends Component
     public $products = [];
     public $inCart = [];
 
-    public $perPage = 8;
-    public $hasMore = true;
-
-    public function mount(){
-        $this->loadProducts();
-    }
-
-    public function loadMore(){
-        $this->perPage += 8;
-        $this->loadProducts();
-    }
-
-    public function loadProducts(){
-        $allProducts = Product::where('stock', '>', 0)
-            ->orderBy('category_id', 'asc')
-            ->take($this->perPage + 1)
-            ->get();
-
-        if ($allProducts->count() <= $this->perPage) {
-            $this->hasMore = false;
-        }
-
-        $this->products = $allProducts->take($this->perPage);
-        $this->inCart = $this->buildInCartArray($this->products);
-
-        if ($allProducts->count() <= $this->perPage) {
-            $this->hasMore = false;
-        }
-    }
 
     public function addProduct($id){
         $product = Product::find($id);

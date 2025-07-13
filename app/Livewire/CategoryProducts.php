@@ -8,7 +8,7 @@ use Livewire\Component;
 
 class CategoryProducts extends Component
 {
-    public ?Category $category;
+    public Category $category;
     public $products = [];
 
     public function mount(Category $category){
@@ -17,7 +17,7 @@ class CategoryProducts extends Component
     }
 
     public function getProducts(){
-        $this->products = $this->category->products()->get();
+        $this->products = Product::where('category_id', $this->category->id)->get();
     }
 
     public function render()
