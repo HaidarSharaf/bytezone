@@ -36,7 +36,7 @@
             resizeTimeout = setTimeout(() => setSlideCount(), 100);
         });
     "
-    class="overflow-hidden xl:max-w-7xl lg:max-w-5xl md:max-w-3xl sm:max-w-xl max-w-xs bg-white md:mx-auto flex flex-col items-center"
+    class="overflow-hidden xl:max-w-7xl lg:max-w-6xl md:max-w-3xl sm:max-w-xl max-w-xs bg-white md:mx-auto flex flex-col items-center"
 >
     <div
         x-ref="slides"
