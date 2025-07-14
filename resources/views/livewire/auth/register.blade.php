@@ -1,6 +1,6 @@
 <div class="rounded-2xl bg-white shadow-xl sm:w-[600px] w-[310px]">
 
-    <form wire:submit.prevent="register" class="lg:p-11 p-7 mx-auto">
+    <form wire:submit.prevent="create" class="lg:p-11 p-7 mx-auto">
 
         <div class="mb-11">
             <h1 class="text-[#0D1B2A] text-center font-manrope text-3xl font-bold leading-10 mb-2">New to Byte
