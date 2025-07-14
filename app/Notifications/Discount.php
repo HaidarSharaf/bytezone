@@ -44,8 +44,7 @@ class Discount extends Notification implements ShouldQueue
             ->markdown('mail.discount', [
                 'body' => $this->body,
                 'imagePath' => $this->imagePath,
-            ])
-            ->from($this->senderEmail, $this->senderName);
+            ]);
 
         if($this->imagePath && file_exists($this->imagePath)) {
             $mail->attach($this->imagePath);

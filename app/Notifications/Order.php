@@ -39,8 +39,7 @@ class Order extends Notification implements ShouldQueue
             ->markdown('mail.order', [
                 'order' => $this->order,
                 'user' => $notifiable,
-            ])
-            ->from('bytezone@gmail.com', 'Byte Zone');
+            ]);
     }
 
     /**
