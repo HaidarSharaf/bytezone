@@ -58,7 +58,7 @@ class Register extends AuthComponent
 
         session()->flash('message', 'Registration successful!');
 
-        $this->redirectIntended(route('home'), navigate: true);
+        $this->redirectIntended(route('verify-email'), navigate: true);
     }
 
     public function render()
